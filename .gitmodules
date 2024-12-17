@@ -1,0 +1,9 @@
+[submodule "activitysim"]
+	path = repos/activitysim
+	url = ../activitysim
+[submodule "larch"]
+	path = repos/larch
+	url = https://github.com/driftlesslabs/larch.git
+[submodule "repos/sharrow"]
+	path = repos/sharrow
+	url = https://github.com/driftlesslabs/sharrow.git

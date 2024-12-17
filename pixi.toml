@@ -1,0 +1,54 @@
+[project]
+authors = ["Jeff Newman <jeff@driftless.xyz>"]
+channels = ["conda-forge"]
+description = "Development Environment for ActivitySim Estimation Mode"
+name = "aestival"
+platforms = ["osx-arm64"]
+version = "0.1.0"
+
+[tasks]
+test-core = { cmd = [
+    "pytest",
+    "repos/activitysim/activitysim/core",
+    "repos/activitysim/activitysim/abm",
+    "repos/activitysim/activitysim/cli",
+    "repos/activitysim/activitysim/examples/test",
+] }
+
+[dependencies]
+addicty = ">=2023.9.3,<2024"
+cytoolz = "==0.12.2"
+dask = "==2023.3.2"
+filelock = ">=3.16.1,<4"
+isort = "==5.12"
+nbmake = ">=1.5.4,<2"
+networkx = ">=3.4,<4"
+numba = ">=0.60"
+numpy = ">=1.26"
+openmatrix = "==0.3.5"
+pandas = "<2"
+pandera = "<0.18.1"
+platformdirs = ">=4.3.6,<5"
+psutil = ">=6.1.0,<7"
+pyarrow = ">=18.1.0,<19"
+pydantic = ">=2.10.3,<3"
+pypyr = ">=5.9.1,<6"
+pytables = ">=3.10.1,<4"
+pytest = ">=8.3.4,<9"
+pytest-regressions = ">=2.5.0,<3"
+python = "==3.10"
+pyyaml = ">=6.0.2,<7"
+requests = ">=2.32.3,<3"
+rich = ">=13.9.4,<14"
+scikit-learn = "==1.2"
+simwrapper = ">=1.8.5,<2"
+sparse = ">=0.15.4,<0.16"
+xarray = "==2023.2"
+zarr = ">=2.18.3,<3"
+zstandard = ">=0.23.0,<0.24"
+
+[pypi-dependencies]
+# locally developed packages, installed in editable mode.
+activitysim = { path = "repos/activitysim", editable = true }
+larch6 = { path = "repos/larch", editable = true }
+sharrow = { path = "repos/sharrow", editable = true }
