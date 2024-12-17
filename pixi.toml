@@ -80,6 +80,7 @@ autodoc_pydantic = "*"
 
 [feature.documentation.tasks]
 make-docs = { cmd = "make html", cwd = "repos/activitysim/docs" }
+aestival-docs = { cmd = "jb build docs" }
 
 [environments]
 documentation = ["documentation"]
