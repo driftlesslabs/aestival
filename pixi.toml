@@ -7,13 +7,15 @@ platforms = ["osx-arm64"]
 version = "0.1.0"
 
 [tasks]
+black-check = { cmd = "black --check --diff repos/activitysim" }
+
 test-core = { cmd = [
     "pytest",
     "repos/activitysim/activitysim/core",
     "repos/activitysim/activitysim/abm",
     "repos/activitysim/activitysim/cli",
     "repos/activitysim/activitysim/examples/test",
-] }
+], depends-on = ["black-check"] }
 
 [dependencies]
 addicty = ">=2023.9.3,<2024"
@@ -46,6 +48,7 @@ sparse = ">=0.15.4,<0.16"
 xarray = "==2023.2"
 zarr = ">=2.18.3,<3"
 zstandard = ">=0.23.0,<0.24"
+black = "22.*"
 
 [pypi-dependencies]
 # locally developed packages, installed in editable mode.
