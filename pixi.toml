@@ -50,9 +50,37 @@ zarr = ">=2.18.3,<3"
 zstandard = ">=0.23.0,<0.24"
 black = "22.*"
 pixi-pycharm = ">=0.0.8,<0.0.9"
+ipykernel = ">=6.29.5,<7"
+xlsxwriter = ">=3.2.0,<4"
 
 [pypi-dependencies]
 # locally developed packages, installed in editable mode.
 activitysim = { path = "repos/activitysim", editable = true }
 larch6 = { path = "repos/larch", editable = true }
 sharrow = { path = "repos/sharrow", editable = true }
+
+[feature.documentation.dependencies]
+altair = "*"
+descartes = "*"
+geopandas = "*"
+jupyter-book = "*"
+jupyterlab = "*"
+matplotlib = "*"
+myst-nb = "*"
+myst-parser = "*"
+numpydoc = "*"
+sphinx-argparse = "*"
+sphinx-autosummary-accessors  = "*"
+sphinx-copybutton = "*"
+sphinx-remove-toctrees = "*"
+sphinx_rtd_theme = "*"
+
+[feature.documentation.pypi-dependencies]
+autodoc_pydantic = "*"
+
+[feature.documentation.tasks]
+make-docs = { cmd = "make html", cwd = "repos/activitysim/docs" }
+
+[environments]
+documentation = ["documentation"]
+
