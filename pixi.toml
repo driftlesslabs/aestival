@@ -17,6 +17,25 @@ test-core = { cmd = [
     "repos/activitysim/activitysim/examples/test",
 ], depends-on = ["black-check"] }
 
+test-estimation = { cmd = [
+    "pytest",
+    "repos/activitysim/activitysim/estimation/estimation/test/test_larch_estimation.py"
+] }
+
+test-estimation-nb-init = { cmd = [
+    "python",
+    "repos/activitysim/activitysim/examples/example_estimation/notebooks/est_mode_setup.py",
+    "--household_sample_size",
+    "5000"
+] }
+
+test-estimation-nb = { cmd = [
+    "pytest",
+    "repos/activitysim/activitysim/examples/example_estimation/notebooks/*.ipynb",
+    "--nbmake-timeout=3000",
+    "--ignore=repos/activitysim/activitysim/examples/example_estimation/notebooks/01_estimation_mode.ipynb"
+], depends-on = ["test-estimation-nb-init"] }
+
 [dependencies]
 addicty = ">=2023.9.3,<2024"
 cytoolz = "==0.12.2"
