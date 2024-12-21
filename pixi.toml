@@ -3,7 +3,7 @@ authors = ["Jeff Newman <jeff@driftless.xyz>"]
 channels = ["conda-forge"]
 description = "Development Environment for ActivitySim Estimation Mode"
 name = "aestival"
-platforms = ["osx-arm64"]
+platforms = ["osx-arm64", "win-64"]
 version = "0.1.0"
 
 [tasks]
