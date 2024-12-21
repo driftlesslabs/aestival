@@ -19,7 +19,7 @@ test-core = { cmd = [
 
 test-estimation = { cmd = [
     "pytest",
-    "repos/activitysim/activitysim/estimation/estimation/test/test_larch_estimation.py"
+    "repos/activitysim/activitysim/estimation/test/test_larch_estimation.py"
 ] }
 
 test-estimation-nb-init = { cmd = [
