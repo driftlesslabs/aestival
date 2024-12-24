@@ -71,6 +71,8 @@ black = "22.*"
 pixi-pycharm = ">=0.0.8,<0.0.9"
 ipykernel = ">=6.29.5,<7"
 xlsxwriter = ">=3.2.0,<4"
+graphviz = ">=12.0.0,<13"
+pydot = ">=3.0.2,<4"
 
 [pypi-dependencies]
 # locally developed packages, installed in editable mode.
