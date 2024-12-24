@@ -34,3 +34,9 @@ different:
 ```powershell
 iwr -useb https://pixi.sh/install.ps1 | iex
 ```
+
+To clone a particular branch of `aestival`, you can use the following command:
+
+```bash
+gh repo clone driftlesslabs/aestival -- --recurse-submodules -b <branch> --single-branch
+```
